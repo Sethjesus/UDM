@@ -1,231 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simple Tab Navigation</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-  }
-  .navbar {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-  }
-  .navbar a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .navbar a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  .content {
-    display: none;
-    padding: 20px;
-    border: 1px solid #ccc;
-    margin-top: 5px;
-  }
-  .active {
-    display: block;
-  }
-  #footer {
-    background-color: #f2f2f2;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-  }
-</style>
-</head>
-<body>
-
-<div class="navbar">
-  <a href="#" onclick="openPage('Home')">Home</a>
-  <a href="#" onclick="openPage('FirstPage')">首頁</a>
-  <a href="#" onclick="openPage('VideoBlog')">Video & Blog</a>
-</div>
-
-<div id="Home" class="content active">
-  <h1>Home</h1>
-  <p><!DOCTYPE html>
-    <html lang="en">
-    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embed Semi-Transparent Image</title>
+    <title>Home Navigation</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-      .semi-transparent-image {
-        opacity: 0.5; /* Adjust opacity between 0 (fully transparent) to 1 (fully opaque) */
-      }
+        .nav-link {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        .nav-link img {
+            width: 100%;
+            height: auto;
+        }
+        .nav-text {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 10%;
+            text-align: center;
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+        .content-container {
+            display: none; /* Initially hide all containers */
+        }
+        .content-container.en {
+            display: block; /* Show English containers by default */
+        }
+        footer, header {
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            padding-top: 20px;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        .language-toggle {
+            cursor: pointer;
+            font-size: 16px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
     </style>
-    </head>
-    <body>
-    
-    <img src="https://github.com/Sethjesus/Jacky/blob/main/pole%20bear.jpeg?raw=true?raw=true" alt="Descriptive Text for Image" class="semi-transparent-image">
-    <h1 style="color: blue; text-align: center; font-size: 2em;">UDM current power consumption</h1>
-  
-                <img src="https://github.com/Sethjesus/Jacky/blob/main/3598.jpg?raw=true",width="1200">
-                            
-         
-            <h1 style="color:blue;">Carbon Emissions and PM2.5 index</h1>
-            <div id="showbox1"></div>
-            <img src="https://onedrive.live.com/embed?resid=8EF63FDD92F9370F%213528&authkey=%21AFOoHQ000NK6fyc&width=1023&height=555" width="1023" height="555">
-            <h1 style="color: blue; text-align: center; font-size: 2em;">About JP ESG and Energy Solution Group</h1>
-
-                    <p>The Environmental Protection Agency divides PM2.5 indicators into four levels: green, yellow, red, and purple. When the concentration of PM2.5 is between 0~35 ug/m<sup>3</sup> 
-                (micrograms/cubic meter), it is green and normal outdoor activities are allowed; when the concentration is between 36~53 ug/m<sup>3</sup>, it is yellow, which means moderate, 
-                 but there are respiratory diseases. It is best to reduce outdoor activities. The colour between 54 and 70 ug/m<sup>3</sup> is red, which means the pollution level is high, 
-                 so it is best to avoid going out. More than 71ug/m<sup>3</sup> is purple, so the pollution is very serious.</p>
-
-
-        <b>Mindset:</b>「People-Oriented、Integrity、Ethical management、Professionalism Matters」&amp;「ESG Sustainable Development、Net-Zero Carbon Emissions、Innovation Development、Clean Earth」.<br>
-        <b>Position:</b>「EMS Technology Trend Innovation、SDGs Social entrepreneurship、ESG Sustainable Development」.<br>
-        <b>Product Position:</b> ESG Energy Power, Energy Consumption Footprint EMS Management &amp; Net-Zero-Carbon-Emission system tool SI Value-Creation Solution Provider.<br>
-        <b>Core Confidence:</b>「PSM Professional Team &amp; ESG Innovation System Integration」.
-    </body>
-    </html>
-
-        <h1 style="color: blue; text-align: center; font-size: 2em;">Real Case & UDM Power Consumption</h1>
-        <p style="text-align: center; font-size: 2.0em;">
-            <a href="https://sethjesus.github.io/ice-chiller/Water%20chiiler%20host.html">The Campus Refrigerate Host Unit Case</a>
-
-
-            <p style="text-align: center; font-size: 2.0em;">
-                <a href="https://chps.kl.edu.tw/">Keelung Zhonghe Elementary School Case</a>
-   
-       
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Product Catalog</title>
-<style>
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .column {
-        width: 50%; /* Each column takes up half of the container width */
-        padding: 5px;
-        box-sizing: border-box; /* Padding included in the box size */
-    }
-    .column p {
-        margin: 10px 0; /* Vertical spacing for links */
-        font-size: 1.8em; /* Larger font size for better readability */
-    }
-</style>
-</head>
-<br>
-<br>
-
-<h1 style="color: blue; text-align: center; font-size: 2em;">Product Catalogue</h1>
-<body>
-<div class="container">
-    <div class="column">
-        <p><a href="https://1drv.ms/b/s!Ag83-ZLdP_aOm1SOLc5_J5zrWZEo?e=LlHb5z">Wired-EMS-Solution</a></p>
-        <p><a href="https://1drv.ms/b/s!Ag83-ZLdP_aOm1ohQKaa6cFxwHB8?e=CpwrRy">UDM-Co.-Wireless-Product-Brochure</a></p>
-        <p><a href="https://1drv.ms/b/s!Ag83-ZLdP_aOm1iUgxyzx5FOMwAy?e=LSNCcb">UDM-Co.Smart-Meter</a></p>
-        <p><a href="https://1drv.ms/b/s!Ag83-ZLdP_aOm1zt8WHThM1pQSZ4?e=UOmTEF">UDM-Co.-Wireless-Product-Package</a></p>
-        <p><a href="https://1drv.ms/b/s!Ag83-ZLdP_aOm1215DXKELynfwns?e=Hg5jej">UDM-Gateway GW06-04</a></p>
-    </div>
-    <div class="column">
-        <p><a href="https://1drv.ms/b/s!Ag83-ZLdP_aOm1YzyiLTXpMBHj4L?e=4uHEKG">EDM_studio-electricity-charge-Solution</a></p>
-        <p><a href="https://1drv.ms/b/s!Ag83-ZLdP_aOm1uizFGzfZsC1PVE?e=F517A6">UDM-Co.-PSM-Profile</a></p>
-        <p><a href="https://1drv.ms/b/s!Ag83-ZLdP_aOm1d42rBnTkUKO6dW?e=gdyIbP">UDM-Co.Wired-Product-CT-Clamp</a></p>
-        <p><a href="https://1drv.ms/b/s!Ag83-ZLdP_aOm1l0cSBWCOYD700a?e=kaL7R9">UDM-Water-Meter-Solution</a></p>
-    </div>
-</div>
-</body>
-</html>
-<<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document Title</title>
-<style>
-  .centered {
-    text-align: center;
-    font-size: 1.0em;
-    color: blue;
-  }
-  .contact-links {
-    color: green;
-    text-align: left; /* Corrected style attribute spelling */
-  }
-  .image-link {
-    display: block;
-    margin: 10px auto; /* Center images */
-    width: 178px; /* Example width, adjust as needed */
-    height: auto;
-  }
-</style>
 </head>
 <body>
+    <header id="pageHeader">
+        <img src="https://via.placeholder.com/100x50" alt="Company Logo">
+        <h1>UDMGROUP</h1>
+        <button class="language-toggle" onclick="toggleLanguage()">中文</button>
+    </header>
+    <div class="container" id="mainContent">
+        <div class="row">
+            <!-- ESG Solutions -->
+            <div class="col-md-4 content-container cn" id="esg_solutions_cn">
+                <a href="https://sethjesus.github.io/JPESG/JP ESG.html" class="nav-link">
+                    <img src="https://github.com/Sethjesus/Photo/blob/main/ESG.jpg?raw=true" alt="ESG Solutions - Abundance" width="150" height="200">
+                    <div class="nav-text">ESG 解決方案</div>
+                </a>
+            </div>
+            <div class="col-md-4 content-container en" id="esg_solutions_en">
+                <a href="https://sethjesus.github.io/JPESG/JP%20ESG.html" class="nav-link">
+                    <img src="https://github.com/Sethjesus/Photo/blob/main/ESG.jpg?raw=true" alt="ESG Solutions - Abundance" width="150" height="150">
+                    <div class="nav-text">ESG Solutions</div>
+                </a>
+            </div>
+            <!-- Video & Blog -->
+            <div class="col-md-4 content-container cn" id="video_blog_cn">
+                <a href="https://sethjesus.github.io/Video-Blog/Video&Blog.html" class="nav-link">
+                    <img src="https://github.com/Sethjesus/Photo/blob/main/Video%26Blog.jpg?raw=true" alt="Video & Blog">
+                    <div class="nav-text">影片與部落格</div>
+                </a>
+            </div>
+            <div class="col-md-4 content-container en" id="video_blog_en">
+                <a href="https://sethjesus.github.io/Video-Blog/Video&Blog.html" class="nav-link">
+                    <img src="https://github.com/Sethjesus/Photo/blob/main/Video%26Blog.jpg?raw=true" alt="Video & Blog">
+                    <div class="nav-text">Video & Blog</div>
+                </a>
+            </div>
+            <!-- IPC -->
+            <div class="col-md-4 content-container cn" id="ipc_cn">
+                <a href="ipc.html" class="nav-link">
+                    <img src="https://github.com/Sethjesus/Photo/blob/main/IPC.jpg?raw=true" alt="IPC">
+                    <div class="nav-text">工業個人電腦</div>
+                </a>
+            </div>
+            <div class="col-md-4 content-container en" id="ipc_en">
+                <a href="ipc_en.html" class="nav-link">
+                    <img src="https://github.com/Sethjesus/Photo/blob/main/IPC.jpg?raw=true" alt="IPC">
+                    <div class="nav-text">Industrial PC</div>
+                </a>
+            </div>
+            <!-- Surveillance Camera -->
+            <div class="col-md-4 content-container cn" id="surveillance_camera_cn">
+                <a href="surveillance_camera.html" class="nav-link">
+                    <img src="https://github.com/Sethjesus/Photo/blob/main/sureillance.jpg?raw=true" alt="Surveillance Camera">
+                    <div class="nav-text">監控攝影機</div>
+                </a>
+            </div>
+            <div class="col-md-4 content-container en" id="surveillance_camera_en">
+                <a href="surveillance_camera_en.html" class="nav-link">
+                    <img src="https://github.com/Sethjesus/Photo/blob/main/sureillance.jpg?raw=true" alt="Surveillance Camera">
+                    <div class="nav-text">Surveillance Camera</div>
+                </a>
+            </div>
+            <!-- Consult -->
+            <div class="col-md-4 content-container cn" id="consult_cn">
+                <a href="consult.html" class="nav-link">
+                    <img src="https://github.com/Sethjesus/Photo/blob/main/Consulting%20service.jpg?raw=true" alt="Consult">
+                    <div class="nav-text">諮詢服務</div>
+                </a>
+            </div>
+            <div class="col-md-4 content-container en" id="consult_en">
+                <a href="consult_en.html" class="nav-link">
+                    <img src="https://github.com/Sethjesus/Photo/blob/main/Consulting%20service.jpg?raw=true" alt="Consult">
+                    <div class="nav-text">Consulting Services</div>
+                </a>
+            </div>
+            <!-- Partners -->
+            <div class="col-md-4 content-container cn" id="partners_cn">
+                <a href="partners.html" class="nav-link">
+                    <img src="https://github.com/Sethjesus/Photo/blob/main/Partner.jpg?raw=true" alt="Partners">
+                    <div class="nav-text">合作夥伴</div>
+                </a>
+            </div>
+            <div class="col-md-4 content-container en" id="partners_en">
+                <a href="partners_en.html" class="nav-link">
+                    <img src="https://github.com/Sethjesus/Photo/blob/main/Partner.jpg?raw=true" alt="Partners">
+                    <div class="nav-text">Partners</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer id="pageFooter">
+        <p id="footerText">Copyright &copy; 2024 UDMGROUP</p>
+    </footer>
 
-<h1 class="centered">Installation Guide</h1>
-<p class="centered"><a href="https://1drv.ms/b/s!Ag83-ZLdP_aOm16F85oRUHDfNY3Y?e=dSXbze">Gate Way GW06/08</a></p>
-<p class="centered"><a href="https://1drv.ms/b/s!Ag83-ZLdP_aOm1_07W-aBbU-IJH5?e=0sbAKb">Gateway with TCP Modbus</a></p>
-
-<h1 class="centered">Certificate</h1>
-<p class="centered"><a href="https://1drv.ms/b/s!Ag83-ZLdP_aOlUc_dutl_8vXpHPy?e=yULEta">Smart Energy Meter COM2</a></p>
-<p class="centered"><a href="https://1drv.ms/b/s!Ag83-ZLdP_aOm2C9rpr6lXW9bLzm?e=Emxl46">Smart Energy Meter COM3/CM04</a></p>
-
-<h1 class="centered">Environmental solutions PM2.5 & Air Quality</h1>
-<p class="centered"><a href="https://1drv.ms/b/s!Ag83-ZLdP_aOnB5Pekod3h7_6pRe?e=FOejQB">Operation manual IAQS Series</a></p>
-
-<div class="contact-links">
-    Contact US<br>
-    <a href="mailto:101.esg@udmgroup.com">101.esg@udmgroup.com</a><br>
-    <a href="mailto:201.esg@udmgroup.com">201.esg@udmgroup.com</a><br>
-    <a href="mailto:301.esg@udmgroup.com">202.esg@udmgroup.com</a><br>
-</div>
-
-<div>
-    <a href="https://api.whatsapp.com/send?phone=886952316596&text=Can%20I%20know%20more%20about%20your%20service.." target="_blank"><img class="image-link" src="https://onedrive.live.com/embed?resid=8EF63FDD92F9370F%213530&authkey=%21AK5W_r7ns1qyZvM"></a>
-    <a href="https://www.facebook.com/groups/2933690666774064"><img class="image-link" src="https://onedrive.live.com/embed?resid=8EF63FDD92F9370F%213531&authkey=%21AInSbjw3MaEJJyI"></a>
-    <a href="https://www.instagram.com/udmesg/"><img class="image-link" src="https://onedrive.live.com/embed?resid=8EF63FDD92F9370F%213532&authkey=%21ACN3ZmiuUygnm_M"></a>
-</div>
-
-<img src="https://onedrive.live.com/embed?resid=8EF63FDD92F9370F%213533&authkey=%21ALQpuW8EmKy6504">
-<img src="https://onedrive.live.com/embed?resid=8EF63FDD92F9370F%213534&authkey=%21AB9rRusAWo7rJcs">
-<img src="https://onedrive.live.com/embed?resid=8EF63FDD92F9370F%213535&authkey=%21ADFcxFjAficZSqI">
-
-</body>
-</html>
-
-<div id="FirstPage" class="content">
-  <h1>首頁</h1>
-  <p>  <img src="https://onedrive.live.com/embed?resid=8EF63FDD92F9370F%213528&authkey=%21AFOoHQ000NK6fyc&width=1023&height=555" width="1023" height="555"/">.</p>
-</div>
-
-<div id="VideoBlog" class="content">
-  <h1>Video & Blog</h1>
-  <p>Welcome to the video and blog section.</p>
-</div>
-
-<div id="footer">
-  <p>Footer content here.</p>
-</div>
-
-<script>
-function openPage(pageId) {
-  var i, tabcontent;
-  tabcontent = document.getElementsByClassName("content");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  document.getElementById(pageId).style.display = "block";
+    <script>
+        let isEnglish = true; // Start with English as default
+        function toggleLanguage() {
+            isEnglish = !isEnglish;
+            const cnContainers = document.querySelectorAll('.content-container.cn');
+            const enContainers = document.querySelectorAll('.content-container.en');
+            if (isEnglish) {
+                cnContainers.forEach(el => el.style.display = 'none');
+                enContainers.forEach(el => el.style.display = 'block');
+            } else {
+                cnContainers.forEach(el => el.style.display = 'block');
+                enContainers.forEach(el => el.style.display = 'none');
+            }
+            document.querySelector('.language-toggle').textContent = isEnglish ? "中文" : "English";
+            document.getElementById('pageHeader').children[1].textContent = isEnglish ? "Company Name" : "UDMGROUP";
+            if (isEnglish) {
+    document.getElementById('footerText').textContent = "Copyright \u00A9 2024 UDMGROUP";
+} else {
+    document.getElementById('footerText').textContent = "版權所有 \u00A9 2024 皓樣科技";
 }
-</script>
 
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 </body>
 </html>
+
+
